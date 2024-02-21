@@ -15,10 +15,15 @@
 
 :root {
   font-size: 62.5%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 body {
   font-size: 1.6rem;
+  background: url(../img/Group8.png) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 img,
@@ -59,59 +64,89 @@ header {
 
 h1 {
   text-align: center;
-  margin-top: 50px;
+  font-size: 80px;
+  margin-top: 70px;
   margin-bottom: 20px;
+  font-weight: 900;
 }
 
 button {
   color: white;
-  background-color: rgb(255, 37, 219);
-  padding: 8px 14px;
+  background-color: #8cb0dd;
+  padding: 8px 60px;
   font-size: 18px;
   border: unset;
   border-radius: 4px;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: #6286b2;
 }
 
 main {
-  padding-inline: 5%;
-  max-width: 1400px;
+  padding-inline: 6%;
+  max-width: 1900px;
   margin-inline: auto;
 }
 
 .picsum_grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 30px;
 }
 
 .picsum_grid div {
   display: flex;
   flex-direction: column;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
+  padding-bottom: 20px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .picsum_grid div {
+    opacity: 0.1;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+  }
+
+  @keyframes fade-in {
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 .picsum_grid div img {
-  border-radius: 6px;
-  height: 250px;
+  border-radius: 6px 6px 0 0;
+  height: 360px;
   width: 100%;
+  object-fit: cover;
 }
 
 .picsum_grid div h2 {
   text-align: center;
-  padding-block: 10px;
+  margin-top: 20px;
+  padding-block: 15px;
 }
 
 .picsum_grid div a {
-  background-color: rgb(255, 37, 219);
+  background-color: #8cb0dd;
   color: white;
-  padding: 6px 12px;
+  padding: 6px 40px;
   border-radius: 4px;
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
   margin-inline: auto;
   transition: all 0.3s;
+  margin-bottom: 20px;
 }
 
 .picsum_grid div a:hover {
-  background-color: rgb(201, 8, 255);
+  background-color: #6286b2;
 }
