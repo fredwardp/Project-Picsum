@@ -1,0 +1,94 @@
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+  }
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-wrap: balance;
+}
+
+p {
+  max-width: 62ch;
+  text-wrap: pretty;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  text-align: center;
+  margin-block: 50px;
+}
+
+main {
+  padding-inline: 5%;
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+.picsum_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.picsum_grid div {
+  display: flex;
+  flex-direction: column;
+}
+
+.picsum_grid div img {
+  border-radius: 6px;
+  height: 200px;
+  width: 100%;
+}
+
+.picsum_grid div h2 {
+  text-align: center;
+  padding-block: 10px;
+}
+
+.picsum_grid div a {
+  background-color: rgb(255, 37, 219);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-inline: auto;
+}
